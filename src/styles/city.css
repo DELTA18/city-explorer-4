@@ -1,0 +1,209 @@
+*{
+    font-family: poppins;
+}
+.grd_4{
+    top: 2330px;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+}
+.grd_5{
+    top: 2730px;
+    left: 1324px;
+    width: 400px;
+    height: 300px;
+}
+.city_landing{
+    margin-top: 30px;
+    /* background-color: #9de8e4; */
+    width: 80vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+.city_landing_top{
+    display: flex;
+    height: 70%;
+}
+.city_left{
+    /* background-color: #8f5af2; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.city_design{
+    display: flex;
+    width: 200px;
+    height: 10px;
+}
+.grey{
+    width: 10px;
+    height: 100%;
+    background-color: #b5b5b5;
+}
+.blue{
+    margin-left: 8px;
+    width: 120px;
+    height: 100%;
+    background-color: #61fdfd;
+}
+.city_heading_primary{
+    font-family: poppins;
+    font-size: 70px;
+    font-weight: 900;
+}
+.city_paragraph{
+    max-width: 500px;
+    font-family: poppins;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+.city_button{
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #d6d6d6;
+    cursor: pointer;
+    transition-duration: 0.6s;
+}
+.city_button:hover{
+    background-color: #9d9d9d;
+}
+.city_right{
+    /* background-color: #949494; */
+    /* width: 100%; */
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.city_right_img{
+    width: 700px;
+    height: 400px;
+    border-radius: 30px;
+    background-image:url('../assets/city_andheri1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.city_landing_bottom{
+    background-color: #949494;
+    height: 100%;
+    border-radius: 30px;
+    margin-top: 20px;
+    background-image:url('../assets/city_andheri2.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* demographics */
+.abc{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+.demographics{
+    background-color: #99FBF5;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 5px;
+}
+.demo_lable{
+    font-weight: 500;
+}
+.demo_right{
+    width: 50%;
+}
+.demo_right img{
+    width: 100%;
+}
+
+/* hoteldestinations */
+.qqq{
+    height: 140vh;
+    margin-bottom: 50px;
+}
+.hhh{
+    font-size: 40px;
+    font-weight: 600;
+}
+.hd_container
+{margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.hd_card{
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    /* border: 2px solid #bebebe; */
+    border-radius: 20px;
+}
+.hd_card_info{
+    padding: 5px;
+    border: 2px solid #bebebe;
+    border-radius: 0px 0px 20px 20px;
+}
+.hd_card img{
+    height: 130px;
+    border-radius: 20px 20px 0px 0px;
+}
+.hd_card_info lable{
+    font-size: 20px;
+    font-weight:500;
+}
+.hd_btn{
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:#61fdfd;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+
+
+
+/* blogs */
+.blog_heading{
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+}
+.blog_container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.blog_card{
+    display: flex;
+    flex-direction: column;
+    /* max-width: 250px; */
+    padding: 20px;
+    border: 2px solid #b5b5b5;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.6s;
+}
+.blog_card:hover{
+    background-color: #c3f9f6cc;
+    box-shadow:  11px 11px 22px #bebebe,
+             -11px -11px 22px #ffffff;
+}
+.blog_title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+.posted_by{
+    color: #9d9d9d;
+}

@@ -1,0 +1,27 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.back-to-top-container {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 45%;
+}
+
+.back-to-top-button {
+  background-color: #007bff9a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.back-to-top-button:hover {
+  background-color: #0056b3;
+}

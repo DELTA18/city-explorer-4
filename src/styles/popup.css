@@ -1,0 +1,83 @@
+.popup{
+    background-color: #0b76824f;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+    animation-name: blurr;
+    animation-duration: 1.7s;
+    z-index: 1000;
+  }
+@keyframes blurr {
+    0%{backdrop-filter: blur(0px);
+        background-color: #c0c0c032;}
+    100%{backdrop-filter: blur(10px);
+        background-color: #0b76824f;}
+}
+.popup-inner{
+    position: relative;
+    padding: 32px;
+    height: 70vh;
+    width: 60%;
+    border-radius: 50px;
+    background-color: #1da4b690;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    animation-name: alpha;
+    animation-duration: 1.7s;
+    
+  }
+@keyframes alpha {
+    0%{backdrop-filter: blur(0px);
+        background-color: #c0c0c032;
+        border-radius: 50%;
+    width: 0%;
+    height: 0vh;}
+    100%{backdrop-filter: blur(10px);
+        background-color: #1da4b690;
+        border-radius: 50px;
+    width: 60%;
+    height: 70vh;}
+}
+.popup-inner-left{
+    display: flex;
+    flex-direction: column;
+}
+.popup-inner-left label{
+    color: #1b033f;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+.popup
+.popup-img{
+    width: 30rem;
+    max-height: 75vh;
+    border-radius: 20px;
+}
+.popup-inner-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+.pp{
+    /* background-color: #790404; */
+    margin-bottom: 15px;
+}
+.popup-name{
+    font-size: 40px;
+    color: #000000;
+}
+.close-button{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
