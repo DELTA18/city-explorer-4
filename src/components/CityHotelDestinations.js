@@ -14,6 +14,7 @@ const Hdcard = (props) => {
 }
 
 const CityHotelDestinations = (props) => {
+  console.log(props.user_id)
   return (
     <section className='city_landing qqq'>
         <label className='hhh' >Explore Hotels in Andheri</label>

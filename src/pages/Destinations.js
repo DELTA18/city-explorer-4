@@ -23,6 +23,7 @@ const Thingstodo = () => {
   
 
   const [destinations, setDestinations] = useState([])
+  const [searchQueries, setSearchQueries] = useState([])
   useEffect(() => {
     // setCityName(a)
     const fetchDestinations = async () => {
@@ -44,6 +45,20 @@ const Thingstodo = () => {
     fetchDestinations()
   }, []);
 
+  const handlesearch = () => {
+    let search = document.getElementById('search')
+    let query = search.value
+    if(query === '')
+    {
+      setSearchQueries([])
+    }
+    else
+    {
+    let results = destinations.filter((hotel)=> hotel.name.toLowerCase().includes(query.toLowerCase()))
+    setSearchQueries(results)
+    }
+  }
+  console.log(searchQueries)
   return (
     <>
     <Header user_name={user_name} user_id={user_id} />
@@ -66,16 +81,16 @@ const Thingstodo = () => {
         <label>Search:</label>
         <section>
         <input type='text' name='search' id='search' className='hotel-searchbar' 
-        // onChange={handlesearch}
-         placeholder='enter hotel name'/>
+        onChange={handlesearch}
+         placeholder='enter here'/>
         <div className='search-results'>
-          {/* {
+          {
             searchQueries.map((hotel) => {
               return(
                 <Searchoptions hotel = {hotel} />
               )
             })
-          } */}
+          }
         </div>
         </section>
       </div>

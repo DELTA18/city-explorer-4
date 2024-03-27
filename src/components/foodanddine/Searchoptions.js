@@ -17,7 +17,7 @@ const Searchoptions = (props) => {
         price = {props.hotel.pricing}
         vejnonvej = {props.hotel.vejnonvej}
         type2 = {props.hotel.type2}
-        img = {props.hotel.imglink}
+        img = {props.hotel.img_link}
          trigger = {buttonpopup}
          settrigger = {setbuttonpopup} />
                 </div>
