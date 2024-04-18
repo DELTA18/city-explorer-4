@@ -60,6 +60,7 @@
     width: 80px;
     height: 23px;
     position: relative;
+    cursor: pointer;
     left: 162px;
     top: 85px;
     border-radius: 8px;

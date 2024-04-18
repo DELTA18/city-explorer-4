@@ -1,4 +1,5 @@
-import React from 'react'
+import React , {useRef, useEffect} from 'react'
+import {motion, useAnimation, useInView, useScroll, useTransform} from 'framer-motion'
 
 import Demographics_img from '../assets/Business Plan-bro.png'
  const Demographics = ({lable, info}) => {
@@ -11,22 +12,43 @@ import Demographics_img from '../assets/Business Plan-bro.png'
  }
  
 
-const CityDemographics = () => {
+const CityDemographics = (props) => {
+  let demo_info = props.info
+  const {scrollYProgress: completionProgress } = useScroll()
+  const containerref = useRef(null)
+  const isInView = useInView(containerref)
+  const mainControls = useAnimation()
+
+  const {scrollYProgress } = useScroll({
+    target:containerref,
+    offset: ["start end", "end end"]
+  })
+
+  useEffect(() => {
+    if(isInView){
+      mainControls.start('visible')
+    }else{
+      mainControls.start('hidden')
+    }
+  })
   return (
-    <div className='city_landing abc'>
+    <motion.div className='city_landing abc' ref={containerref}>
         <div className='city_left' >
         <div className='city_design'><div className='grey'/><div className='blue' /> </div>
             <lable className='city_heading_primary' >Demographics</lable>
-            <Demographics lable={'Area(2020):'} info={'16.06 km²'} />
-            <Demographics lable={'Population (2020):'} info={'395292'} />
-            <Demographics lable={'Population Density:'} info={'24608 people per km²'} />
-            <Demographics lable={'Male Population:'} info={'205918'} />
-            <Demographics lable={'Female Population:'} info={'189374'} />
+
+            {
+              demo_info.map((info)=> {
+                return (
+                  <Demographics  lable={info[0]} info={info[1]}  />
+                )
+              })
+            }
         </div>
         <div className='demo_right' >
             <img src={Demographics_img} alt='demo' />
         </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -13,7 +13,6 @@ const { ObjectId } = require('mongodb');
 const salt  = 10;
 app.get('/userinfo', async (req, res) => {
     let user_id = req.query.user_id
-    console.log(user_id)
     const z = req.body.check
     try {
         const user = await user_info.findOne({ _id: user_id });
@@ -28,7 +27,6 @@ app.get('/userinfo', async (req, res) => {
 })
 
 app.post('/', async (req, res)=>{ 
-    console.log("hellou")
     // const ipAddress = req.ip || req.connection.remoteAddress;
     // console.log(ipAddress)
     const{name,password} = req.body;
@@ -79,10 +77,7 @@ app.post('/signup', async (req, res)=>{
         console.log(user)
         
         try {
-            console.log('check---------->')
             const check = await user_info.findOne({username:username})
-            console.log(check.username)
-            console.log(req.body.username)
             if(check.username == req.body.username)
             {
                 res.json('exists')
@@ -124,7 +119,6 @@ app.post('/foodanddine', async (req, res) => {
     const info = req.body.id
     const user_id = req.body.user_id
     const liked = req.body.liked
-    console.log(liked)
     let a;
     if(liked){
 

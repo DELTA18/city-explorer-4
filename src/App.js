@@ -56,7 +56,7 @@ function App() {
           <Route path='/destinations' element={ <Destinations/> } />
           <Route path='/thingstodo' element={ <Thingstodo/> } />
           <Route path='/foodanddining' element={ <Foodanddine user_name = {user_name} /> } />
-          <Route path='/account' element = { <Account/> } />
+          <Route path='/account' element = { <Account/> } />  
           <Route path='/stay' element = { <Stay/> } />
           <Route path='/andheri' element = { <Andheri/> } />
           <Route path='/bandra' element = { <Bandra/> } />
