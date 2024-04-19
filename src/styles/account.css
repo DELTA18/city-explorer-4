@@ -1,0 +1,13 @@
+.acc_container{
+    display: flex;
+    padding-top: 20px;
+
+
+}
+.acc_left{
+    text-align: center;
+}
+
+.user_avatar img{
+    width: 250px;
+}

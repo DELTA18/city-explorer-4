@@ -65,6 +65,7 @@
     width: fit-content;
     padding: 10px;
     display: flex;
+    border-radius: 10px;
     align-items: center;
     background-color: #d6d6d6;
     cursor: pointer;
