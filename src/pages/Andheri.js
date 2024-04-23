@@ -103,7 +103,7 @@ const Andheri = () => {
     ['Female Population:', '189374']
 ]} />
           <CityHotelDestinations user_id ={user_id} user_name = {user_name} city={city} />
-          <CityBlogs />
+          <CityBlogs city={city} />
       </section>
       </div>
       <Footer/>

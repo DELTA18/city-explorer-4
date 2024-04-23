@@ -158,34 +158,47 @@
     justify-content: space-evenly;
 }
 .city_card {
-    /* background-color: #f727a7;    */
-    /* position: relative; */
-    width: 300px; 
-    height: 400px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    text-decoration: none;
+    margin-top: 80px;
+    position: relative;
+    max-width: 300px;
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 20px;
 }
 
 .city_card img {
-    max-width: 100%; 
-    max-height: 100%; 
+    object-fit: cover;
+    width: 100%; /* Make the image width fill its container */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
 }
 
-.city_card lable {
-    text-decoration: none;
-    text-align: center;
-    position: relative;
-    top: -25%;
-    left: 26%;
-    transform: translate(-50%, -50%);
-    
-    cursor: pointer;
-    color: #00fff7;
-    font-size: 34px;
-    font-weight: 800;
-    font-family: poppins;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: white; /* Text color */
+    font-size: 40px;
+    opacity: 1;
+    transition: opacity 0.3s ease; 
+}
+
+.overlay label {
+    font-weight: 700;
+    color: white; /* Text color */
+    font-size: 30px; /* Font size */
+}
+
+.city_card:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.city_card:hover img {
+    transform: scale(1.1); /* Scale image on hover */
 }

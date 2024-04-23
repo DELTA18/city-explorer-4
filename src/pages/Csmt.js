@@ -105,7 +105,7 @@ const Csmt = () => {
     ['Nearest Railway Station & Distance (Aerial):', 'Bandra, 0.97 km']
 ]} />
           <CityHotelDestinations user_id ={user_id} user_name = {user_name} city={city} />
-          <CityBlogs />
+          <CityBlogs city={city} />
       </section>
       </div>
       <Footer/>

@@ -2,7 +2,7 @@ import {motion, useAnimation, useInView, useScroll, useTransform} from 'framer-m
 import { useEffect, useRef } from 'react'
 import andheri_img from '../assets/andheri_mainimg.jpg'
 import bandra_img from '../assets/bandra_mainimg.jpg'
-import csmt_img from '../assets/csmt_mainimg.webp'
+import csmt_img from '../assets/csmt_mainimg.jpg'
 const Home_3rd = (props) => {
     const containerref = useRef(null)
     const {scrollYProgress: completionProgress } = useScroll()
@@ -42,17 +42,23 @@ const Home_3rd = (props) => {
             <div className='ogga'>
                 <a href={`/andheri?city=${props.city}&user_id=${props.user_id}&user_name=${props.user_name}`} className='city_card' >
                     <img src={andheri_img} />
+                    <div className='overlay'>
                     <lable>Andheri</lable>
+                    </div>
                 </a>
 
                 <a href={`/bandra?city=${props.city}&user_id=${props.user_id}&user_name=${props.user_name}`} className='city_card' >
                     <img src={bandra_img} />
+                    <div className='overlay'>
                     <lable>Bandra</lable>
+                    </div>
                 </a>
 
                 <a href={`/csmt?city=${props.city}&user_id=${props.user_id}&user_name=${props.user_name}`} className='city_card' >
                     <img src={csmt_img} />
+                    <div className='overlay'>
                     <lable>Csmt</lable>
+                    </div>
                 </a>
             </div>
         </motion.section>

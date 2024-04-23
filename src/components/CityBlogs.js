@@ -12,29 +12,29 @@ const BlogCard = (props) => {
     )
 }
 
-const CityBlogs = () => {
+const CityBlogs = ({city}) => {
   return (
     <div className='city_landing'>
-        <lable className='blog_heading'>See what people are writing about Andheri</lable>
+        <lable className='blog_heading'>See what people are writing about {city}</lable>
         <div className='blog_container' >
-            <BlogCard title={'6 Reasons Why Andheri Is the Best Place to Live in Mumbai'}
-             by={'IndexTap'}
-             link={'https://www.indextap.com/blog/6-reasons-why-andheri-is-the-best-place-to-live-in-mumbai/'}/>
-            <BlogCard title={'Andheri: The Backbone of Mumbai Suburbs'}
-            by={'blox.xyz'}
-            link={'https://blox.xyz/blog/andheri-the-backbone-of-mumbai-suburbs'} />
-            <BlogCard title={'Andheri East - The Business Beat of Mumbai'} 
+            <BlogCard title={'Bandra West- BLOG - RACHEL KING'}
+             by={'rachelkingcreative'}
+             link={'https://www.rachelkingcreative.com/blog/tag/Bandra+West'}/>
+            <BlogCard title={'Exploring Mumbai: A Day in Bandra'} 
+            by={'ToursByLocals'}
+            link={'https://www.toursbylocals.com/blog/mumbai-day-in-bandra'} />
+            <BlogCard title={'Bandra West - A Harmonious blend of tradition and Modernity in Mumbai’s Cultural Hub'}
             by={'jugyah.com'}
-            link={'https://jugyah.com/blogs/andheri-east-neighborhood-guide'} />
-            <BlogCard title={'ANDHERI WEST OR ANDHERI EAST: UNRAVELING THE BEST SUBURBAN LIVING OPTIONS IN MUMBAI’S HEARTBEAT'} 
-            by={'PropertyOk'}
-            link={'https://www.propertyok.com/blog/andheri-west-or-andheri-east/'} />
-            <BlogCard title={'Andheri: The Emerging Corporate Hub of Mumbai'} 
-            by={'Adani Reality'}
-            link={'https://www.adanirealty.com/blogs/andheri-the-emerging-corporate-hub-of-mumbai'} />
-            <BlogCard title={'Everything you need to know about Andheri East, Mumbai'} 
-            by={'Mygate'}
-            link={'https://mygate.com/blog/neighbourhood/andheri-east/'} />
+            link={'https://jugyah.com/blogs/guides/bandra-west-neighborhood-guide'} />
+            <BlogCard title={'BANDRA FORT: AN UNEXPECTED MID-WEEK TREAT'} 
+            by={' sudhagee'}
+            link={'https://sudhagee.com/2010/06/02/bandra-fort/'} />
+            <BlogCard title={'Bandra – Then and Now'} 
+            by={'Nicole Herbert Dean'}
+            link={'https://blogs.transparent.com/hindi/bandra-then-and-now/'} />
+            <BlogCard title={'Exploring Bandra Street Art'} 
+            by={'Ramda'}
+            link={'https://www.ramadaplaza-juhu.com/blogs/exploring-bandra-street-art.html'} />
         </div>
     </div>
   )

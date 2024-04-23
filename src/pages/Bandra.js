@@ -14,7 +14,7 @@ const Bandra = () => {
   const queryParams = new URLSearchParams(location.search);
   let user_name = queryParams.get('user_name')
   let user_id = queryParams.get('user_id')
-  let city = 'andheri'
+  let city = 'bandra'
 
   function handleClick(link) {
     window.open(`${link}`, '_blank', 'noopener,noreferrer');
@@ -105,7 +105,7 @@ const Bandra = () => {
     ['Nearest Railway Station & Distance (Aerial):', 'Bandra, 0.97 km']
 ]} />
           <CityHotelDestinations user_id ={user_id} user_name = {user_name} city={city} />
-          <CityBlogs />
+          <CityBlogs city={city} />
       </section>
       </div>
       <Footer/>

@@ -53,7 +53,7 @@ export const Signup = () => {
          }
          else if(res.data==='notexists' && password.length >= 5 && isOnlyDigits(phone))
          {
-          history('/home', {state:{id:name}})
+          history('/home', {state:{name:name, id:res.data.id}})
          }
       })
       .catch(e => {

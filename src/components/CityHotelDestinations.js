@@ -16,7 +16,7 @@ const Hdcard = (props) => {
 const CityHotelDestinations = (props) => {
   return (
     <section className='city_landing qqq'>
-        <label className='hhh' >Explore Hotels in Andheri</label>
+        <label className='hhh' >Explore Hotels in Bandra</label>
         <div className='hd_container aaa' >
             <Hdcard img={'https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/i/g/p2316-1478501430582024368fecc.jpg?tr=tr:n-large'}
              name={'banana leaf'}
@@ -35,12 +35,12 @@ const CityHotelDestinations = (props) => {
               add={'Opposite Apna Bazar, Dhake Colony, J.P. Road, Azad Nagar, Andheri (West), Mumbai-400053, 400053 Mumbai, India'} />
 
         </div>
-        <a className='hd_btn' href= {`/foodanddining?city=${props.city}&id=${props.user_id}&user_name=${props.user_name}`}>See all hotels in Andheri</a>
+        <a className='hd_btn' href= {`/foodanddining?city=${props.city}&id=${props.user_id}&user_name=${props.user_name}`}>See all hotels in Bandra</a>
 
         
 
 
-        <label className='hhh' >Places to visit in Andheri</label>
+        <label className='hhh' >Places to visit in Bandra</label>
         <div className='hd_container' >
             <Hdcard img={'data:image/jpeg;base64,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'}
              name={'Versova Beach | Picturesque Mumbai Seashore'}
@@ -59,7 +59,7 @@ const CityHotelDestinations = (props) => {
               add={'Juhu,Mumbai, Maharashtra 400049'} />
 
         </div>
-        <a className='hd_btn' href={`/destinations?city=${props.city}&user_id=${props.user_id}&user_name=${props.user_name}`}>See all places to visit in Andheri</a>
+        <a className='hd_btn' href={`/destinations?city=${props.city}&user_id=${props.user_id}&user_name=${props.user_name}`}>See all places to visit in Bandra</a>
     </section>
   )
 }

@@ -38,6 +38,7 @@ app.post('/', async (req, res)=>{
             if (compareErr) {
                 // res.json("login", { err: "An error occurred during password comparison." });
                 console.log(compareErr)
+                
                 // return;
             }
 
@@ -119,7 +120,6 @@ app.post('/foodanddine', async (req, res) => {
     const info = req.body.id
     const user_id = req.body.user_id
     const liked = req.body.liked
-    let a;
     if(liked){
 
         a = await user_info.updateOne(
@@ -132,8 +132,6 @@ app.post('/foodanddine', async (req, res) => {
             { $pull: { favourite_hotels: info } } )
     }
 
-    console.log(a)
-
 })
 
 app.get('/destinations', async (req, res) => {
@@ -145,6 +143,39 @@ app.get('/destinations', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+
+app.post('/account', (req, res) => {
+    console.log('accccccccc')
+})
+
+app.get('/api/user/:user_id', async (req, res) => {
+    try {
+        console.log('apiiiiiiiiii')
+        const user_id = req.params.user_id;
+        const user = await user_info.findById(user_id);
+        res.status(200).json(user);
+    } catch (error) {
+        console.error('Error fetching user:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Route to update email
+app.put('/api/user/:userId/email', async (req, res) => {
+    try {
+      const userId = req.params.userId;
+      const { email } = req.body;
+  
+      await User.findByIdAndUpdate(userId, { email });
+  
+      res.status(200).json({ message: 'Email updated successfully' });
+    } catch (error) {
+      console.error('Error updating email:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
 
 app.all('', (req, res) => {
     res.end('<h1>This is Server port</h1>')

@@ -18,7 +18,7 @@ export const Home = () => {
 
   const journey = () => {
     window.scrollTo({
-      top: 1350,
+      top: 1550,
       behavior: 'smooth'
   });
   }
